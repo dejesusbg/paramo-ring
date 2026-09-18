@@ -1,4 +1,4 @@
-# Páramo Ring 🏔️
+# páramo ring
 
 A tiny webring for Colombian builders — personal sites and projects, linked together the old-web way. No algorithm, no feed, just people linking to people.
 
