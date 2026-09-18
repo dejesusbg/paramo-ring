@@ -1,0 +1,12 @@
+{
+  "name": "paramo-ring",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A tiny webring for Colombian builders.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build-manifest.mjs"
+  }
+}

@@ -1,0 +1,30 @@
+name: Build manifest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'members/*.json'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: node scripts/build-manifest.mjs
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add members.json README.md
+          git diff --cached --quiet || git commit -m "chore: regenerate members.json and README table"
+          git push
