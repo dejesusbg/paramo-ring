@@ -13,7 +13,9 @@ This repo *is* the whole project: there's no hosted homepage. Member data lives 
 <script src="https://cdn.jsdelivr.net/gh/dejesusbg/paramo-ring@main/embed.js" defer></script>
 ```
 
-Replace `your-slug` with the filename (no `.json`) you'll use in the next step. This renders a small ← [icon] → nav: the arrows link to the previous/next site in the ring, and the icon links back to this repo.
+Replace `your-slug` with the filename (no `.json`) you'll use in the next step. This renders a small 🏔️ button; clicking it opens a random other site in the ring in a new tab.
+
+The only thing you can customize is its size, via `--paramoring-size` (defaults to `48px`) on the `[data-paramoring]` element.
 
 **2. Create your member file**
 
